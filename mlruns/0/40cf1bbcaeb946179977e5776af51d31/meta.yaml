@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/ruchi/Downloads/Diamond-Price-Prediction-main/Diamond-Price-Prediction-main/mlruns/0/40cf1bbcaeb946179977e5776af51d31/artifacts
+end_time: 1782490731611
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 40cf1bbcaeb946179977e5776af51d31
+run_name: smiling-cub-784
+run_uuid: 40cf1bbcaeb946179977e5776af51d31
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1782490722716
+status: 3
+tags: []
+user_id: ruchi
