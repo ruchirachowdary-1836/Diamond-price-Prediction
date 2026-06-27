@@ -1,159 +1,230 @@
-# Diamond - Price - Prediction
+# 💎 Diamond Price Prediction
 
-## About The Project
+## 📌 About the Project
 
-The Diamond Price Prediction project is an end-to-end machine learning initiative designed to forecast the prices of diamonds. Diamonds are highly valuable gemstones, and their prices can vary significantly based on various factors. This project aims to leverage machine learning techniques to provide accurate predictions of diamond prices, thereby offering valuable insights to both buyers and sellers in the diamond market.
+The **Diamond Price Prediction** project is an end-to-end Machine Learning application that predicts the price of diamonds based on their physical and quality-related characteristics.
 
-## About the Data
+Diamonds are valuable gemstones whose prices depend on multiple factors such as carat, cut, color, clarity, and dimensions. This project uses regression-based machine learning algorithms to accurately estimate diamond prices, helping buyers, sellers, and businesses make informed decisions.
 
-The dataset The goal is to predict the price of a given diamond (Regression Analysis).
+---
 
-There are 10 independent variables (including id):
+# 📊 About the Dataset
 
- - id: the unique identifier of each diamond
- - carat: Carat (ct.) refers to the unique unit of weight measurement used exclusively to weigh gemstones and diamonds.
- - cut: Quality of Diamond Cut
- - color: Color of Diamond
- - clarity: Diamond clarity is a measure of the purity and rarity of the stone, graded by the visibility of these characteristics under 10-power magnification.
- - depth: The depth of the diamond is its height (in millimetres) measured from the culet (bottom tip) to the table (flat, top surface)
- - table: A diamond's table is the facet which can be seen when the stone is viewed face up.
- - x : Diamond X dimension
- - y: Diamond Y dimension
- - z: Diamond Z dimension
+The objective of this project is to predict the **price** of a diamond using its features.
 
-### Target variable: 
-- price: Price of the given Diamond.
-  
+### Features
 
-Dataset Source Link : ```https://www.kaggle.com/competitions/playground-series-s3e8/data?select=train.csv```
+| Feature | Description                       |
+| ------- | --------------------------------- |
+| id      | Unique identifier of each diamond |
+| carat   | Weight of the diamond (Carat)     |
+| cut     | Quality of the cut                |
+| color   | Diamond color grade               |
+| clarity | Diamond clarity grade             |
+| depth   | Total depth percentage            |
+| table   | Width of the diamond's table      |
+| x       | Length (mm)                       |
+| y       | Width (mm)                        |
+| z       | Depth (mm)                        |
 
-## Built With
+### 🎯 Target Variable
 
- - Pandas
- - Numpy
- - Scikit-learn
- - Flask
- - DVC
- - MLFlow
- - Seaborn
- - Matplotlib
+* **price** — Price of the diamond
 
+---
 
-## Getting Started
+# 🛠️ Tech Stack
 
-This will help you understand how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+* Flask
+* MLflow
+* DVC
+* Matplotlib
+* Seaborn
 
-## Installation Steps
+---
 
-### Option 1: Installation from GitHub
+# 🚀 Installation
 
-Follow these steps to install and set up the project directly from the GitHub repository:
-
-1. **Clone the Repository**
-   - Open your terminal or command prompt.
-   - Navigate to the directory where you want to install the project.
-   - Run the following command to clone the GitHub repository:
-     ```
-     git clone https://github.com/KalyanMurapaka45/Diamond-Price-Prediction.git
-     ```
-
-2. **Create a Virtual Environment** (Optional but recommended)
-   - It's a good practice to create a virtual environment to manage project dependencies. Run the following command:
-     ```
-     conda create -p <Environment_Name> python==<python version> -y
-     ```
-
-3. **Activate the Virtual Environment** (Optional)
-   - Activate the virtual environment based on your operating system:
-       ```
-       conda activate <Environment_Name>/
-       ```
-
-4. **Install Dependencies**
-   - Navigate to the project directory:
-     ```
-     cd [project_directory]
-     ```
-   - Run the following command to install project dependencies:
-     ```
-     pip install -r requirements.txt
-     ```
-
-5. **Run the Project**
-   - Start the project by running the appropriate command.
-     ```
-     python app.py
-     ```
-
-6. **Access the Project**
-   - Open a web browser or the appropriate client to access the project.
-  
-<br><br>
-### Option 2: Installation from DockerHub
-
-If you prefer to use Docker, you can install and run the project using a Docker container from DockerHub:
-
-1. **Pull the Docker Image**
-   - Open your terminal or command prompt.
-   - Run the following command to pull the Docker image from DockerHub:
-     ```
-     docker pull kalyan45/diamond-app
-     ```
-
-2. **Run the Docker Container**
-   - Start the Docker container by running the following command, and mapping any necessary ports:
-     ```
-     docker run -p 5000:5000 kalyan45/diamond-app
-     ```
-
-3. **Access the Project**
-   - Open a web browser or the appropriate client to access the project.
-
-
-## Setup
-
-### MLflow Tracking
-
-We use MLflow to log and track our machine learning experiments. The MLFLOW_TRACKING_URI environment variable is set to the DagsHub repository's MLflow tracking URI.
+## 1. Clone the Repository
 
 ```bash
-export MLFLOW_TRACKING_URI=https://dagshub.com/HemaKalyan45/Diamond-Price-Prediction.mlflow
-
-export MLFLOW_TRACKING_USERNAME=HemaKalyan45
-
-export MLFLOW_TRACKING_PASSWORD=f3c9457eb0ff83244e93ac8ee651b80d4b35f07c
+git clone https://github.com/ruchirachowdary-1836/Diamond-price-Prediction.git
 ```
 
-##  Usage and Configuration
+Move into the project directory:
 
-This project requires Amazon Web Services Access Key ID and Secret Access Key for interacting with AWS services. Follow these steps to configure your project to use AWS keys:
+```bash
+cd Diamond-price-Prediction
+```
 
-1. **Obtain Your AWS Access Key ID and Secret Access Key**:
-   - Log in to the AWS Management Console.
-   - Open the IAM (Identity and Access Management) dashboard.
-   - Create a new IAM user or use an existing one.
-   - Attach the necessary policies to the user.
-   - Generate an access key for the user. Save these keys securely.
+---
 
-2. **Configuration**:
-   - Store your AWS Access Key ID and Secret Access Key securely. Do not hardcode them directly in your code or expose them in public repositories. Instead, use environment variables or a configuration file to manage them securely.
+## 2. Create a Virtual Environment (Recommended)
 
+Using Conda
 
-## Contributing
+```bash
+conda create -n diamond python=3.10 -y
+```
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Activate the environment
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+```bash
+conda activate diamond
+```
 
-1. Fork the Project
-2. Create your Feature Branch
-3. Commit your Changes
-4. Push to the Branch
+Or using Python
+
+```bash
+python -m venv venv
+```
+
+Windows
+
+```bash
+venv\Scripts\activate
+```
+
+Linux/Mac
+
+```bash
+source venv/bin/activate
+```
+
+---
+
+## 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 4. Run the Application
+
+```bash
+python app.py
+```
+
+---
+
+## 5. Open in Browser
+
+Visit
+
+```
+http://127.0.0.1:5000
+```
+
+---
+
+# 🐳 Running with Docker (Optional)
+
+Build Docker Image
+
+```bash
+docker build -t diamond-price-prediction .
+```
+
+Run Docker Container
+
+```bash
+docker run -p 5000:5000 diamond-price-prediction
+```
+
+---
+
+# 📁 Project Structure
+
+```
+Diamond-price-Prediction/
+│
+├── artifacts/
+├── notebooks/
+├── src/
+├── templates/
+├── static/
+├── app.py
+├── requirements.txt
+├── setup.py
+├── Dockerfile
+├── README.md
+└── .gitignore
+```
+
+---
+
+# 📈 Machine Learning Workflow
+
+* Data Collection
+* Data Cleaning
+* Exploratory Data Analysis (EDA)
+* Feature Engineering
+* Data Preprocessing
+* Model Training
+* Model Evaluation
+* Model Deployment using Flask
+
+---
+
+# 📌 Future Improvements
+
+* Hyperparameter Tuning
+* Model Monitoring
+* CI/CD Pipeline
+* Cloud Deployment (AWS/Azure/GCP)
+* REST API Integration
+* Docker & Kubernetes Deployment
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository
+2. Create a new feature branch
+
+```bash
+git checkout -b feature-name
+```
+
+3. Commit your changes
+
+```bash
+git commit -m "Added new feature"
+```
+
+4. Push to GitHub
+
+```bash
+git push origin feature-name
+```
+
 5. Open a Pull Request
 
-## License
+---
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+# 👩‍💻 Author
 
+**Ruchira Chowdary**
+
+GitHub:
+https://github.com/ruchirachowdary-1836
+
+---
+
+# ⭐ Support
+
+If you found this project helpful, consider giving it a **⭐ Star** on GitHub.
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License**.
